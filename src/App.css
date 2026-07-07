@@ -1,0 +1,232 @@
+/* Nettoyage pour affichage 100% Mobile */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.mobl-fullscreen-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+}
+
+.mobl-phone-screen {
+  width: 100%;
+  max-width: 450px; /* S'adapte sur PC mais prend tout l'écran sur Smartphone */
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Barre supérieure */
+.mobl-status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* En-tête Vert Sénégal */
+.mobl-app-header {
+  background-color: #008751;
+  color: #ffffff;
+  padding: 16px;
+  text-align: center;
+}
+.mobl-app-header h2 { margin: 0; font-size: 1.3rem; font-weight: 800; letter-spacing: 0.5px; }
+.mobl-app-header p { margin: 4px 0 0 0; font-size: 0.75rem; opacity: 0.9; }
+
+/* Corps */
+.mobl-app-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Formulaires & Groupes */
+.mobl-screen-auth, .mobl-screen-main { display: flex; flex-direction: column; width: 100%; }
+.mobl-auth-intro { text-align: center; margin-bottom: 1.5rem; }
+.mobl-auth-intro h3 { font-size: 1.1rem; color: #1e293b; margin: 0; font-weight: 700; }
+.mobl-auth-intro p { font-size: 0.8rem; color: #64748b; margin-top: 6px; line-height: 1.4; }
+
+.mobl-form-core { display: flex; flex-direction: column; gap: 14px; }
+.mobl-input-group { display: flex; flex-direction: column; gap: 6px; }
+.mobl-input-group label { font-size: 0.75rem; font-weight: 700; color: #475569; text-transform: uppercase; }
+
+.mobl-input-group input, 
+.mobl-input-group select, 
+.mobl-input-group textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  font-size: 0.9rem;
+  color: #1e293b;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none; /* Uniformité iOS/Android */
+}
+.mobl-input-group textarea { height: 90px; resize: none; }
+.mobl-input-group input:focus, .mobl-input-group select:focus, .mobl-input-group textarea:focus {
+  border-color: #008751;
+  background-color: #ffffff;
+}
+
+/* Tabs */
+.mobl-tabs-nav {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  gap: 4px;
+}
+.mobl-tab-link {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.mobl-tab-link.is-active {
+  background-color: #ffffff;
+  color: #008751;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.mobl-user-badge {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #334155;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.mobl-geo-box {
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Boutons */
+.mobl-btn-submit {
+  background-color: #008751;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.mobl-btn-dark { background-color: #1e293b; }
+
+.mobl-otp-resend { font-size: 0.75rem; color: #64748b; text-align: center; margin-top: 12px; }
+.mobl-otp-resend span { color: #008751; text-decoration: underline; font-weight: 600; }
+
+/* Onglet proximité */
+.mobl-prox-text { font-size: 0.8rem; color: #64748b; margin-bottom: 12px; }
+.mobl-prox-list { display: flex; flex-direction: column; gap: 10px; }
+.mobl-prox-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; }
+.mobl-card-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: #1e293b; }
+.mobl-badge-dist { font-size: 0.7rem; font-weight: 700; color: #475569; background-color: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+.mobl-prox-card p { font-size: 0.8rem; color: #64748b; margin: 6px 0; }
+.mobl-badge-status { font-size: 0.7rem; font-weight: 700; color: #008751; background-color: rgba(0,135,81,0.06); padding: 2px 6px; border-radius: 4px; }
+
+/* Toast */
+.mobl-sync-toast { position: absolute; bottom: 16px; left: 16px; right: 16px; padding: 14px; border-radius: 12px; text-align: center; font-size: 0.8rem; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.mobl-sync-toast.sending { background-color: #1e293b; color: #ffffff; }
+.mobl-sync-toast.success { background-color: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+
+.mobl-spinner-row { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.mobl-loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cbd5e1;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: mobl-spin 0.8s linear infinite;
+}
+@keyframes mobl-spin { to { transform: rotate(360deg); } }
+.mobl-upload-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #f8fafc !important;
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px dashed #cbd5e1 !important;
+  font-size: 0.85rem;
+  color: #475569 !important;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+.mobl-upload-trigger:active {
+  background-color: #e2e8f0 !important;
+}
+
+/* Le conteneur de l'aperçu */
+.mobl-preview-container {
+  position: relative;
+  width: 100%;
+  height: 160px; /* Un peu plus grand pour que le jury voit bien la photo */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1 !important;
+  background-color: #000;
+}
+
+.mobl-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recadre proprement l'image sans la déformer */
+}
+
+/* Bouton pour supprimer la photo */
+.mobl-remove-photo-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(223, 27, 35, 0.9) !important; /* Rouge Sénégal */
+  color: #ffffff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
