@@ -110,7 +110,7 @@ export default function App() {
               <motion.div key="login" className="mobl-screen-auth" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <div className="mobl-auth-intro">
                   <h3>🇸🇳 Identification Citoyenne</h3>
-                  <p>Entrez vos informations (fictives ou réelles) pour tester le tunnel de sécurité OTP.</p>
+                  <p>Entrez vos informations pour tester le tunnel de sécurité OTP.</p>
                 </div>
                 <form onSubmit={handleRequestOtp} className="mobl-form-core">
                   <div className="mobl-input-group">
@@ -137,7 +137,7 @@ export default function App() {
               <motion.div key="otp" className="mobl-screen-auth" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }}>
                 <div className="mobl-auth-intro">
                   <h3>💬 Validation du profil</h3>
-                  <p>Simulez la réception du SMS. Tapez le code de l'école ou du pays : <strong>2221</strong>.</p>
+                  <p>Simulez la réception du SMS. Tapez le code : <strong>2221</strong>.</p>
                 </div>
                 <form onSubmit={handleVerifyOtp} className="mobl-form-core">
                   <div className="mobl-input-group">
